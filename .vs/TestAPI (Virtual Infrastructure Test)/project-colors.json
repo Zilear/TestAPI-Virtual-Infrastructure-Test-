@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6e649b37-311b-4f85-91eb-3d810f16653b": {
+      "ProjectGuid": "6e649b37-311b-4f85-91eb-3d810f16653b",
+      "DisplayName": "TestWebApp",
+      "ColorIndex": 0
+    },
+    "5479b7ef-72fd-4329-bdc3-3125ea98f54b": {
+      "ProjectGuid": "5479b7ef-72fd-4329-bdc3-3125ea98f54b",
+      "DisplayName": "TestAPI (Virtual Infrastructure Test)",
+      "ColorIndex": 1
+    },
+    "090ab028-63b1-41ad-bc0c-2658b97d5f98": {
+      "ProjectGuid": "090ab028-63b1-41ad-bc0c-2658b97d5f98",
+      "DisplayName": "BusinessObjects",
+      "ColorIndex": 2
+    },
+    "1c8d0e01-7262-460f-bc22-e966c2016dbc": {
+      "ProjectGuid": "1c8d0e01-7262-460f-bc22-e966c2016dbc",
+      "DisplayName": "UI",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

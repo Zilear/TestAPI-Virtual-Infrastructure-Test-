@@ -1,0 +1,25 @@
+﻿@using BusinessObjects.Model
+@using BusinessObjects.Service
+@model Product
+@{
+    ViewData["Title"] = "Main Page";
+}
+
+
+<form asp-action="PutProduct" asp-controller="Product" asp-route-id="@Model.Id">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label">Имя</label>
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Description" class="control-label">Возраст</label>
+        <input type="number" asp-for="Description" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Сохранить" class="btn btn-default" />
+    </div>
+</form>
+
+
+
+

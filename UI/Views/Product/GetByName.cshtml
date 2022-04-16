@@ -1,0 +1,52 @@
+﻿@using BusinessObjects.Model
+@using BusinessObjects.Service
+@model IEnumerable<Product> 
+@{
+    ViewData["Title"] = "Main Page";
+}
+
+
+
+<h1>Products</h1>
+<p></p>
+
+
+
+<form asp-controller="Product" asp-action="GetByName">
+    <p>
+        Title: <input type="text" name="name" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+
+<table class ="table">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+    </tr>
+    @if(Model != null)
+    {
+       @foreach(Product product in Model)
+       {
+       <tr>
+           <td>
+               @product.Id
+           </td>
+           <td>
+               @product.Name
+           </td>
+           <td>
+               @product.Description
+           </td>
+       </tr>
+       }
+    }
+</table>

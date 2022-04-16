@@ -1,0 +1,36 @@
+﻿@using BusinessObjects.Model
+@using BusinessObjects.Service
+@model ActionResult
+@{
+    ViewData["Title"] = "Main Page";
+}
+
+
+
+<h1>Products</h1>
+<p></p>
+
+<form asp-controller="Product" asp-action="PostProduct">
+    <p>
+        Name: <input type="text" name="name" />
+    </p>
+    <p>
+        Description: <input type="text" name="description" />
+    </p>
+    <p>
+        <input type="submit" value="Put" />
+    </p>
+</form>
+
+@if(Model != null)
+{
+    @switch(Model.GetType().Name) 
+    {
+        case nameof(OkResult):
+            <h1>Success</h1>
+            break;
+        case nameof(BadRequestResult):
+            <h1>BadRequest</h1>
+            break;
+    }
+}

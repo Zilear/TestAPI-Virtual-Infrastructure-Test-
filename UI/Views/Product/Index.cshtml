@@ -1,0 +1,63 @@
+﻿@using BusinessObjects.Model
+@using BusinessObjects.Service
+@model ProductViewModel
+@{
+    ViewData["Title"] = "Main Page";
+}
+
+<h1>Products</h1>
+<p></p>
+
+<a asp-action="PostProduct">Add new Product</a>
+<table class ="table">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+    </tr>
+    @foreach(Product product in Model.CurrentPageProducts)
+    {
+        <tr>
+            <td>
+                @product.Id
+            </td>
+            <td>
+                @product.Name
+            </td>
+            <td>
+                @product.Description
+            </td>
+            <td>
+                <a asp-action="PutProduct" asp-controller="Product" asp-route-id="@product.Id">Edit</a>
+                <a asp-action="DeleteProduct" asp-controller="Product" asp-route-id="@product.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+
+@if (Model.PageViewModel.HasPreviousPage)
+{
+    <a asp-action="Index"
+       asp-route-page="@(Model.PageViewModel.PageNumber - 1)"
+       class="btn btn-outline-dark">
+        <i class="glyphicon glyphicon-chevron-left"></i>
+        Назад
+    </a>
+}
+@if (Model.PageViewModel.HasNextPage)
+{
+    <a asp-action="Index"
+       asp-route-page="@(Model.PageViewModel.PageNumber + 1)"
+       class="btn btn-outline-dark">
+        Вперед
+        <i class="glyphicon glyphicon-chevron-right"></i>
+    </a>
+}
+
+

@@ -6,6 +6,9 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace BusinessObjects.Dataset
 {
+    /// <summary>
+    /// auto-generated code.
+    /// </summary>
     public partial class TestDbContext : DbContext
     {
         public TestDbContext()
